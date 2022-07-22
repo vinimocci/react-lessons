@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [buttonTitle, setButtonTitle] = useState('Sou um botão! =D')
+
+  useEffect(() => {
+    console.log("Testando meu useEffect")
+  }, [buttonTitle]);
 
   const changeButtonTitle = (user) => {
 
